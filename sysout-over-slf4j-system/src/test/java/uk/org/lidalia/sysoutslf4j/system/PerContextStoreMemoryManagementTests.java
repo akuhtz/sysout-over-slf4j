@@ -28,9 +28,11 @@ import java.lang.ref.ReferenceQueue;
 import java.lang.ref.WeakReference;
 
 import org.junit.Test;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 
 import static org.junit.Assert.assertNull;
 
+@PowerMockIgnore("jdk.internal.reflect.*")
 public class PerContextStoreMemoryManagementTests extends SysOutOverSLF4JTestCase {
 
     private final PerContextStore<String> storeUnderTest = new PerContextStore<String>();

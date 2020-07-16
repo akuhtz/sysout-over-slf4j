@@ -29,6 +29,7 @@ import java.io.PrintStream;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -42,6 +43,7 @@ import static org.powermock.api.mockito.PowerMockito.whenNew;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest({PerContextPrintStream.class, PerContextSystemOutput.class})
+@PowerMockIgnore("jdk.internal.reflect.*")
 public class PerContextSystemOutputTests extends SysOutOverSLF4JTestCase {
 
     @Test

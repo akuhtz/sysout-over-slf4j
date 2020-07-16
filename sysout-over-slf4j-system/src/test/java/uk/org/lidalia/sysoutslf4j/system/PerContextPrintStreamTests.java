@@ -34,6 +34,7 @@ import java.util.List;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.powermock.core.classloader.annotations.PowerMockIgnore;
 import org.powermock.core.classloader.annotations.PrepareForTest;
 import org.powermock.modules.junit4.PowerMockRunner;
 
@@ -49,6 +50,7 @@ import static uk.org.lidalia.test.ShouldThrow.shouldThrow;
 
 @RunWith(PowerMockRunner.class)
 @PrepareForTest(PerContextPrintStream.class)
+@PowerMockIgnore("jdk.internal.reflect.*")
 public class PerContextPrintStreamTests {
 
     private PrintStream originalPrintStreamMock;

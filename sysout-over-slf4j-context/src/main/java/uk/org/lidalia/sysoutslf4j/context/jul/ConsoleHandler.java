@@ -8,10 +8,10 @@ import uk.org.lidalia.sysoutslf4j.system.PerContextSystemOutput;
 public class ConsoleHandler extends StreamHandler {
 
     /**
-     * Create a <tt>ConsoleHandler</tt> for <tt>System.err</tt>.
+     * Create a <code>ConsoleHandler</code> for <code>System.err</code>.
      * <p>
-     * The <tt>ConsoleHandler</tt> is configured based on
-     * <tt>LogManager</tt> properties (or their default values).
+     * The <code>ConsoleHandler</code> is configured based on
+     * <code>LogManager</code> properties (or their default values).
      *
      */
     public ConsoleHandler() {
@@ -19,10 +19,10 @@ public class ConsoleHandler extends StreamHandler {
     }
 
     /**
-     * Publish a <tt>LogRecord</tt>.
+     * Publish a <code>LogRecord</code>.
      * <p>
-     * The logging request was made initially to a <tt>Logger</tt> object,
-     * which initialized the <tt>LogRecord</tt> and forwarded it here.
+     * The logging request was made initially to a <code>Logger</code> object,
+     * which initialized the <code>LogRecord</code> and forwarded it here.
      * <p>
      * @param  record  description of the log event. A null record is
      *                 silently ignored and is not published
@@ -33,9 +33,9 @@ public class ConsoleHandler extends StreamHandler {
     }
 
     /**
-     * Override <tt>StreamHandler.close</tt> to do a flush but not
+     * Override <code>StreamHandler.close</code> to do a flush but not
      * to close the output stream.  That is, we do <b>not</b>
-     * close <tt>System.err</tt>.
+     * close <code>System.err</code>.
      */
     public void close() {
         flush();
